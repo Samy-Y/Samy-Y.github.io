@@ -1,18 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samy Youssoufine</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Samy Youssoufine</h1>
-        <h2>Personal Website</h2>
-    </header>
-    <div class="warning">
-        <p>This website is under construction!</p>
-    </div>
-</body>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Samy Youssoufine</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!--
+	It took me like an hour to do cuz i didn't touch threejs in a few months now
+	take a look at the code. original source is html5up.
+-->
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#" class="icon solid fa-home"><span>Home</span></a>
+						<a href="#work" class="icon solid fa-folder"><span>Projects</span></a>
+						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Me -->
+							<article id="home" class="panel intro">
+								<header>
+									<h1>Samy Youssoufine</h1>
+									<p>I'm a 17 year-old student who's passionate about computer science and history.</p>
+								</header>
+								<a href="#work" class="jumplink pic">
+									<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+									<canvas id="canvas"></canvas>
+								</a>
+							</article>
+
+						<!-- Work -->
+							<article id="work" class="panel">
+								<header>
+									<h2>Projects</h2>
+								</header>
+								<p>
+									Below is a list of most of the projects I've worked on. Most of them are school-related, but some of them are personal projects I worked on during my free time.
+								</p>
+								<section>
+									<div class="row">
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/high-seas-2024.avif" alt=""></a>
+										</div>
+									</div>
+								</section>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact" class="panel">
+								<header>
+									<h2>Contact Me</h2>
+								</header>
+									<i class="fa fa-envelope-open"></i><span style="margin-left:20px;"><b>E-mail &mdash; </b><a href="mailto:youssoufinesamy@gmail.com">youssoufinesamy@gmail.com</a></span><br>
+									<i class="fa fa-phone"></i><span style="margin-left:20px;"><b>Phone &mdash; </b>+212 6 66 64 98 01</span>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>2025 &mdash; Samy Youssoufine</li>
+							<li><a href="mailto:youssoufinesamy@gmail.com">youssoufinesamy@gmail.com</a></li>
+							<li>+212 6 66 64 98 01</li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script type="importmap">
+				{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@v0.172.0/build/three.module.js",
+					"three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.172.0/examples/jsm/"
+				}
+				}
+			</script>
+			<script type="module" src="assets/js/animations.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
