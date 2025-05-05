@@ -1,96 +1,188 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Samy Youssoufine</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!--
-	It took me like an hour to do cuz i didn't touch threejs in a few months now
-	take a look at the code. original source is html5up.
--->
-		<!-- Wrapper-->
-			<div id="wrapper">
+  <head>
+    <title>Samy Youssoufine</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <!-- Custom styles for activity descriptions -->
+    <style>
+      .activity-desc {
+        display: block;
+        font-size: 0.9em;
+        line-height: 1.4;
+        color: #4a4a4a;
+        margin-top: 0.25em;
 
-				<!-- Nav -->
-					<nav id="nav">
-						<a href="#" class="icon solid fa-home"><span>Home</span></a>
-						<a href="#work" class="icon solid fa-folder"><span>Projects</span></a>
-						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
-					</nav>
+      }
+	  .cv-buttons {
+        display: flex;
+        gap: 1em;
+        margin-top: 1em;
+      }
+      .cv-buttons a {
+        padding: 0.5em 1em;
+        background-color: #4a90e2;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+      .cv-buttons a:hover {
+        background-color: #357ABD;
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+    <!-- Template: Astral by HTML5 UP | Customised by Samy Youssoufine – May 2025 -->
+    <div id="wrapper">
 
-				<!-- Main -->
-					<div id="main">
+      <!-- Nav -->
+      <nav id="nav">
+        <a href="#" class="icon solid fa-home"><span>Home</span></a>
+        <a href="#activities" class="icon solid fa-award"><span>Activities</span></a>
+        <a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
+        <a href="#cv" class="icon solid fa-file"><span>CV</span></a>
+      </nav>
 
-						<!-- Me -->
-							<article id="home" class="panel intro">
-								<header>
-									<h1>Samy Youssoufine</h1>
-									<p>I'm a 17 year-old student who's passionate about computer science and history.</p>
-								</header>
-								<a href="#work" class="jumplink pic">
-									<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
-									<canvas id="canvas"></canvas>
-								</a>
-							</article>
+      <!-- Main -->
+      <div id="main">
 
-						<!-- Work -->
-							<article id="work" class="panel">
-								<header>
-									<h2>Projects</h2>
-								</header>
-								<p>
-									Below is a list of most of the projects I've worked on. Most of them are school-related, but some of them are personal projects I worked on during my free time.
-								</p>
-								<section>
-									<div class="row">
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/high-seas-2024.avif" alt=""></a>
-										</div>
-									</div>
-								</section>
-							</article>
+        <!-- Intro -->
+        <article id="home" class="panel intro">
+          <header>
+            <h1>Samy Youssoufine</h1>
+            <p>17‑year‑old student passionate about computer science, history and astronomy, with a strong academic record.</p>
+          </header>
+          <a href="#activities" class="jumplink pic">
+            <span class="arrow icon solid fa-chevron-right"><span>See my activities</span></span>
+            <canvas id="canvas"></canvas>
+          </a>
+        </article>
 
-						<!-- Contact -->
-							<article id="contact" class="panel">
-								<header>
-									<h2>Contact Me</h2>
-								</header>
-									<i class="fa fa-envelope-open"></i><span style="margin-left:20px;"><b>E-mail &mdash; </b><a href="mailto:youssoufinesamy@gmail.com">youssoufinesamy@gmail.com</a></span><br>
-									<i class="fa fa-phone"></i><span style="margin-left:20px;"><b>Phone &mdash; </b>+212 6 66 64 98 01</span>
-							</article>
+        <!-- Extracurricular Activities & Awards -->
+        <article id="activities" class="panel">
+          <header>
+            <h2>Extracurricular&nbsp;Activities&nbsp;&amp;&nbsp;Awards</h2>
+          </header>
+          <p>A snapshot of the clubs, competitions and initiatives that shape my journey beyond the classroom.</p>
 
-					</div>
+          <section>
+            <ul class="alt">
+              <li>
+                <strong>2nd&nbsp;Place</strong> – <a href="https://orientino-souss.com/%d9%85%d8%b3%d8%a7%d8%a8%d9%82%d8%a9-2025-hackathon-%d9%84%d9%84%d8%a8%d8%b1%d9%85%d8%ac%d8%a9/" target="_blank" rel="noopener">Orient’ino&nbsp;Souss Hackathon</a> (<a href="https://naat.ma" target="_blank" rel="noopener"><em>Na’t</em></a>) — <time datetime="2025-04">Apr&nbsp;2025</time>
+                <span class="activity-desc">Project lead for <em>Na’t</em>, a centralised web platform that streamlines application workflows between students and schools. Our open‑source MVP topped 20+ teams to secure 2nd place.</span>
+              </li>
 
-				<!-- Footer -->
-					<div id="footer">
-						<ul class="copyright">
-							<li>2025 &mdash; Samy Youssoufine</li>
-							<li><a href="mailto:youssoufinesamy@gmail.com">samy@youssoufine.me</a></li>
-							<li>+212 6 66 64 98 01</li>
-						</ul>
-					</div>
+              <li>
+                <strong>Organisers’ Prize</strong> – <a href="https://scrapyard.hackclub.com/casablanca" target="_blank" rel="noopener">Scrapyard Casablanca Hackathon</a>, Hack&nbsp;Club — <time datetime="2025-03">Mar&nbsp;2025</time>
+              </li>
 
+              <li>
+                <strong>Participant</strong> – <a href="https://highseas.hackclub.com">YSWS High Seas 2024</a> — <time datetime="2024-10">Oct&nbsp;2024</time> – <time datetime="2025-01">Jan&nbsp;2025</time>
+                <span class="activity-desc">Designed, developed, and deployed immersive 3D web applications, earning hardware awards and recognition during the Hack Club's High Seas event.</span>
+              </li>
+
+              <li>
+                <strong>Audience Prize</strong> – Algorithmics Hackathon (<a href="https://github.com/Samy-Y/Skolar" target="_blank" rel="noopener"><em>Skolar</em></a>) — <time datetime="2024-08">Aug&nbsp;2024</time>
+                <span class="activity-desc">Co‑developed <em>Skolar</em>, a lightweight CMS that lets schools curate and distribute learning resources. Prototyped in under 10&nbsp;hours and voted best by attendees.</span>
+              </li>
+
+              <li>
+                <strong>President</strong> – Interact Club Dcheira Azour (Rotary) — <time datetime="2024-03">Mar&nbsp;2024</time> – present
+                <span class="activity-desc">Coordinate the only Interact club in Agadir, mentoring 20 members and delivering community projects on education, health and other fields in partnership with Rotary Club Agadir Kasbah Sud.</span>
+              </li>
+
+              <li>
+                <strong>1st&nbsp;Prize</strong> – <a href="https://sites.google.com/view/concoursmeilleurspeaker/accueil" target="_blank" rel="noopener">“Meilleur Speaker”</a> public‑speaking contest — <time datetime="2024-02">Feb&nbsp;2024</time>
+                <span class="activity-desc">Won a public‑speaking showdown hosted by the Al Hanane High School and journalist Ouadih&nbsp;Dada, earning top marks for stage presence.</span>
+              </li>
+
+              <li>
+                <strong>Winner</strong> – Video Making Contest, DCS Education & Al Hanane II — <time datetime="2023-12">Dec&nbsp;2023</time>
+                <span class="activity-desc">Directed and edited an educational short film about future city development recognised for storytelling quality and production value by a UK‑based publishing house.</span>
+              </li>
+
+              <li>
+                <strong>Founder &amp; Leader</strong> – <a href="https://sites.google.com/view/club-dinfo-h2/accueil" target="_blank" rel="noopener">Pixel Lab</a> (Hack Club chapter) — <time datetime="2023-09">Sep&nbsp;2023</time> – present
+                <span class="activity-desc">Run weekly hands‑on workshops in coding, electronics and digital art. Pixel Lab became the third Moroccan chapter of <a href="https://hackclub.com" target="_blank" rel="noopener">Hack&nbsp;Club</a>, bringing open‑source culture to fellow students.</span>
+              </li>
+
+              <li>
+                <strong>Jury 1st Prize</strong> – “<a href="https://sites.google.com/view/hikmah-compte-rendu/accueil" target="_blank" rel="noopener">Hikmah</a>” project, Salon&nbsp;du&nbsp;Livre — <time datetime="2023-06">Jun&nbsp;2023</time>
+                <span class="activity-desc">Art‑directed <em>L’Épopée Marocaine</em>, a richly illustrated encyclopedia series on Moroccan dynasties; produced layouts, covers and exhibition graphics.</span>
+              </li>
+
+              <li>
+                <strong>Participant</strong> – <a href="https://sites.google.com/view/compte-rendu-jrpe/accueil" target="_blank" rel="noopener">Young&nbsp;Reporters for the Environment</a> — <time datetime="2023-04">Apr&nbsp;2023</time>
+                <span class="activity-desc">Led production of a documentary on pollution in Oued Souss: storyboard, on‑site filming and Adobe Premiere editing.</span>
+              </li>
+
+              <li>
+                <strong>Audience &amp; Jury Award</strong> – “<a href="https://sites.google.com/view/backtech-compte-rendu/accueil" target="_blank" rel="noopener">BackTech</a>” project, Salon&nbsp;de&nbsp;l’Entrepreneur — <time datetime="2023-03">Mar&nbsp;2023</time>
+                <span class="activity-desc">Proposed reconditioning of discarded computers to curb e‑waste and expand digital access; built an immersive booth with live demos and explanatory video.</span>
+              </li>
+
+              <li>
+                <strong>Writer‑Designer</strong> – <em>Minecraft‑France</em> website — <time datetime="2020-05">May&nbsp;2020</time> – <time datetime="2024-10">Oct&nbsp;2024</time>
+                <span class="activity-desc">Published reviews and technical articles, alongside custom visuals, for one of the largest francophone Minecraft communities, under the username <i>samcraft3</i>.</span>
+              </li>
+
+              <li>
+                <strong>Founder</strong> – <em>MineBuilding</em> Minecraft multiplayer server — <time datetime="2018-07">Jul&nbsp;2018</time> – <time datetime="2019-07">Jul&nbsp;2019</time>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!-- Contact -->
+        <article id="contact" class="panel">
+          <header>
+            <h2>Contact Me</h2>
+          </header>
+          <i class="fa fa-envelope-open"></i><span style="margin-left:20px;"><b>E‑mail&nbsp;&mdash;&nbsp;</b><a href="mailto:youssoufinesamy@gmail.com">youssoufinesamy@gmail.com</a></span><br />
+          <i class="fa fa-phone"></i><span style="margin-left:20px;"><b>Phone&nbsp;&mdash;&nbsp;</b>06&nbsp;‑ 666 ‑ 49 ‑ 801</span>
+        </article>
+
+		<article id="cv" class="panel">
+			<header>
+			  <h2>Curriculum Vitae</h2>
+			</header>
+			<p>Select the language version of my CV to view or download:</p>
+			<div class="cv-buttons">
+			  <a href="assets/EN%20CV%20Samy%20Youssoufine%20290425.pdf" target="_blank" rel="noopener">English CV</a>
+			  <a href="assets/CV%20Samy%20Youssoufine%20290425.pdf" target="_blank" rel="noopener">French CV</a>
 			</div>
+		  </article>
 
-		<!-- Scripts -->
-			<script type="importmap">
-				{
-				"imports": {
-					"three": "https://cdn.jsdelivr.net/npm/three@v0.172.0/build/three.module.js",
-					"three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.172.0/examples/jsm/"
-				}
-				}
-			</script>
-			<script type="module" src="assets/js/animations.js"></script>
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      </div>
 
-	</body>
+      <!-- Footer -->
+      <div id="footer">
+        <ul class="copyright">
+          <li>2025&nbsp;&mdash;&nbsp;Samy Youssoufine</li>
+          <li><a href="mailto:youssoufinesamy@gmail.com">samy@youssoufine.me</a></li>
+          <li>06&nbsp;‑ 666 ‑ 49 ‑ 801</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.172.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.172.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="assets/js/animations.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
