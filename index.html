@@ -284,6 +284,43 @@
 </html>
 
 <script>
+    // Dynamically discover and preload all gallery images and videos from data-slides
+    const preloadGalleryMedia = () => {
+        const preloadedSources = new Set();
+        document.querySelectorAll('.project-gallery').forEach((gallery) => {
+            let slides = [];
+            try {
+                slides = JSON.parse(gallery.dataset.slides || '[]');
+            } catch (err) {
+                return;
+            }
+
+            slides.forEach((slide) => {
+                const src = slide.src ? slide.src.trim() : '';
+                if (!src || preloadedSources.has(src)) return;
+                preloadedSources.add(src);
+
+                if (/\.(mp4|webm|ogg|mov|m4v)(\?.*)?$/i.test(src)) {
+                    // Preload video into cache
+                    const video = document.createElement('video');
+                    video.preload = 'auto';
+                    video.src = src;
+                    video.load();
+                } else {
+                    // Preload image into cache
+                    const img = new Image();
+                    img.src = src;
+                }
+            });
+        });
+    };
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', preloadGalleryMedia);
+    } else {
+        preloadGalleryMedia();
+    }
+
     const projectBtn = document.querySelector('.button-project');
     const backBtn = document.querySelector('.button-back');
     const mainCard = document.querySelector('.main-card');
