@@ -41,7 +41,7 @@
             </a>
         </div>
     </div>
-    <div class="project-list slide-in-right" style="display:none;">
+    <div class="project-list slide-out-right" style="display:none;">
         <div class="screw-bottom-left"></div>
         <div class="screw-bottom-right"></div>
 
@@ -52,63 +52,230 @@
             <h2 class="project-list-title">Projects</h2>
         </div>
 
+
         <div class="projects-grid">
-            <!-- Project 1: Na't -->
-            <div class="project-card">
-                <span class="project-title">Na't (Orient'ino Souss Hackathon)</span>
-                <div class="project-tags">
-                    <span class="project-tag"><i class="fab fa-js"></i> JavaScript</span>
-                    <span class="project-tag"><i class="fab fa-python"></i> Python</span>
-                    <span class="project-tag"><i class="fas fa-trophy"></i> 2nd Place</span>
+            <!-- cartesian system plotter -->
+            <div class="project-card" tabindex="0">
+                <div class="project-content">
+                    <span class="project-title">Cartesian System Plotter</span>
+                    <div class="project-date-row">
+                        <div class="project-date-tag">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>January 2026 &ndash; June 2026</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag project-tag-university"><i class="fas fa-graduation-cap"></i>
+                            University
+                            Project</span>
+                        <span class="project-tag"><i class="fas fa-microchip"></i> Electronics</span>
+                    </div>
+                    <span class="project-description">Precision CNC cartesian system plotter engineered with dual-axis
+                        stepper drives and custom pen plotting end-effector.</span>
                 </div>
-                <span class="project-description">Project lead for Na't, a centralized web platform streamlining
-                    application workflows between students and schools. Secured 2nd place out of 20+ teams.</span>
-            </div>
-
-            <!-- Project 2: High Seas -->
-            <div class="project-card">
-                <span class="project-title">YSWS High Seas 2024</span>
-                <div class="project-tags">
-                    <span class="project-tag"><i class="fas fa-cube"></i> Three.js</span>
-                    <span class="project-tag"><i class="fab fa-js"></i> JavaScript</span>
-                    <span class="project-tag"><i class="fas fa-award"></i> Hardware Award</span>
-                </div>
-                <span class="project-description">Designed, developed, and deployed immersive 3D web applications,
-                    earning hardware awards during Hack Club's global High Seas event.</span>
-            </div>
-
-            <!-- Project 3: Skolar -->
-            <div class="project-card">
-                <span class="project-title">Skolar (Algorithmics Hackathon)</span>
-                <div class="project-tags">
-                    <span class="project-tag"><i class="fab fa-python"></i> Python</span>
-                    <span class="project-tag"><i class="fas fa-file-code"></i> CMS</span>
-                    <span class="project-tag"><i class="fas fa-trophy"></i> Audience Prize</span>
-                </div>
-                <span class="project-description">Co-developed a lightweight CMS that lets schools curate and distribute
-                    learning resources. Prototyped in under 10 hours and voted best by attendees.</span>
-                <div class="project-links">
-                    <a href="https://github.com/Samy-Y/Skolar" class="project-link" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
+                <div class="project-gallery" data-slides='[
+                    {"src": "pictures/scc-view1.jpg", "caption": "Main Assembly (Top)"},
+                    {"src": "pictures/scc-view2.jpg", "caption": "Main Assembly (Corner)"},
+                    {"src": "pictures/scc-test2.MP4", "caption": "Unit movement tests"},
+                    {"src": "pictures/scc-pres.JPEG", "caption":"Forum stand"}
+                ]'>
+                    <button class="gallery-nav-btn gallery-prev" type="button" aria-label="Previous image"><i
+                            class="fas fa-caret-left"></i></button>
+                    <div class="gallery-screen">
+                        <img class="gallery-image" alt="" />
+                        <div class="crt-overlay"></div>
+                        <div class="gallery-caption"></div>
+                    </div>
+                    <button class="gallery-nav-btn gallery-next" type="button" aria-label="Next image"><i
+                            class="fas fa-caret-right"></i></button>
                 </div>
             </div>
 
-            <!-- Project 4: Pixel Lab -->
-            <div class="project-card">
-                <span class="project-title">Pixel Lab (Hack Club)</span>
-                <div class="project-tags">
-                    <span class="project-tag"><i class="fas fa-graduation-cap"></i> Education</span>
-                    <span class="project-tag"><i class="fas fa-microchip"></i> Electronics</span>
-                    <span class="project-tag"><i class="fas fa-users"></i> Hack Club</span>
+            <!-- three-wheeled mobile platform (first year uni project) -->
+            <div class="project-card" tabindex="0">
+                <div class="project-content">
+                    <span class="project-title">Best Delegate - EMC Youth MUN 2026</span>
+                    <div class="project-date-row">
+                        <div class="project-date-tag">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>April 2026</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag"><i class="fas fa-comment-medical"></i> Debating</span>
+                        <span class="project-tag"><i class="fas fa-flag"></i> International Relations</span>
+                        <span class="project-tag"><i class="fas fa-microphone"></i> Public Speaking</span>
+                    </div>
+                    <span class="project-description">Best Delegate award at the <a href="https://mun2026.netlify.app/"
+                            class="regular-link">2026 EMC Youth MUN</a> for my
+                        performance representing the People's Republic of China at the model UNGA comittee on the
+                        topic of <i>"Bridging the
+                            Digital
+                            Divide: Ensuring Equitable Access to Digital Education and Protecting Online
+                            Privacy"</i>.</span>
                 </div>
-                <span class="project-description">Founded and led pixel lab chapter. Organized weekly workshops in
-                    coding, electronics, and digital art to bring open-source culture to fellow students.</span>
-                <div class="project-links">
-                    <a href="https://sites.google.com/view/club-dinfo-h2/accueil" class="project-link" target="_blank">
-                        <i class="fas fa-external-link-alt"></i> Website
-                    </a>
+                <div class="project-gallery" data-slides='[
+                    {"src": "pictures/emc-award.JPG", "caption": "Final Award Obtained"},
+                    {"src": "pictures/emc-forum.JPG", "caption": "Unmoderated Caucus"}
+                ]'>
+                    <button class="gallery-nav-btn gallery-prev" type="button" aria-label="Previous image"><i
+                            class="fas fa-caret-left"></i></button>
+                    <div class="gallery-screen">
+                        <img class="gallery-image" alt="" />
+                        <div class="crt-overlay"></div>
+                        <div class="gallery-caption"></div>
+                    </div>
+                    <button class="gallery-nav-btn gallery-next" type="button" aria-label="Next image"><i
+                            class="fas fa-caret-right"></i></button>
                 </div>
+            </div>
+
+            <!-- three-wheeled mobile platform (first year uni project) -->
+            <div class="project-card" tabindex="0">
+                <div class="project-content">
+                    <span class="project-title">Three-Wheeled Mobile Platform</span>
+                    <div class="project-date-row">
+                        <div class="project-date-tag">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>September 2025 &ndash; January 2026</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag project-tag-university"><i class="fas fa-graduation-cap"></i>
+                            University
+                            Project</span>
+                        <span class="project-tag"><i class="fas fa-microchip"></i> Arduino</span>
+                        <span class="project-tag"><i class="fas fa-robot"></i> Electronics</span>
+                        <span class="project-tag"><i class="fas fa-cube"></i> CAD</span>
+                    </div>
+                    <span class="project-description">Three-wheeled mobile platform for autonomous navigation. Developed
+                        using an Arduino Uno microcontroller and featuring PID control for DC
+                        motor speed regulation.</span>
+                </div>
+                <div class="project-gallery" data-slides='[
+                    {"src": "pictures/ppmobile-moves.MP4", "caption": "Final Platform Tests"},
+                    {"src": "pictures/ppmobile-view.JPEG", "caption": "No-electronics Assembly"}
+                ]'>
+                    <button class="gallery-nav-btn gallery-prev" type="button" aria-label="Previous image"><i
+                            class="fas fa-caret-left"></i></button>
+                    <div class="gallery-screen">
+                        <img class="gallery-image" alt="" />
+                        <div class="crt-overlay"></div>
+                        <div class="gallery-caption"></div>
+                    </div>
+                    <button class="gallery-nav-btn gallery-next" type="button" aria-label="Next image"><i
+                            class="fas fa-caret-right"></i></button>
+                </div>
+            </div>
+
+            <!-- naat -->
+            <div class="project-card" tabindex="0">
+                <div class="project-content">
+                    <span class="project-title">Na't (Orient'ino Souss Hackathon)</span>
+                    <div class="project-date-row">
+                        <div class="project-date-tag">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>April 2025</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="project-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="project-tag"><i class="fas fa-trophy"></i> 2nd Place</span>
+                    </div>
+                    <span class="project-description">Project lead for Na't, a centralized web platform streamlining
+                        application workflows between students and schools. Secured 2nd place out of 20+ teams.</span>
+                </div>
+                <div class="project-gallery" data-slides='[
+                    {"src": "pictures/naat-home.png", "caption": "Na&apos;t&apos;s Home Page"},
+                    {"src": "pictures/naat-dashboard.png", "caption": "Na&apos;t&apos;s Dashboard"},
+                    {"src": "pictures/naat-aura.jpg", "caption": "Presenting Na&apos;t"},
+                    {"src": "pictures/elite-hackathon-group.JPEG", "caption": "Na&apos;t&apos;s Hackathon Group"}
+                ]'>
+                    <button class="gallery-nav-btn gallery-prev" type="button" aria-label="Previous image"><i
+                            class="fas fa-caret-left"></i></button>
+                    <div class="gallery-screen">
+                        <img class="gallery-image" alt="" />
+                        <div class="crt-overlay"></div>
+                        <div class="gallery-caption"></div>
+                    </div>
+                    <button class="gallery-nav-btn gallery-next" type="button" aria-label="Next image"><i
+                            class="fas fa-caret-right"></i></button>
+                </div>
+            </div>
+
+            <!-- high seas -->
+            <!-- not sure about leaving that here... not good habits to comment out huge loads of code but i'll think about that later -->
+            <!-- <div class="project-card" tabindex="0">
+                <div class="project-content">
+                    <span class="project-title">YSWS High Seas 2024</span>
+                    <div class="project-date-row">
+                        <div class="project-date-tag">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>October 2024 &ndash; January 2025</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag"><i class="fas fa-cube"></i> Three.js</span>
+                        <span class="project-tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="project-tag"><i class="fas fa-award"></i> Hardware Award</span>
+                    </div>
+                    <span class="project-description">Designed, developed, and deployed 3D static web pages,
+                        earning hardware awards during Hack Club's global High Seas event.</span>
+                </div>
+                <div class="project-gallery" data-slides='[
+                    {"src": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80", "caption": "Interactive 3D Web Canvas Render"},
+                    {"src": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80", "caption": "Hardware Award Winner Demonstration"}
+                ]'>
+                    <button class="gallery-nav-btn gallery-prev" type="button" aria-label="Previous image"><i
+                            class="fas fa-caret-left"></i></button>
+                    <div class="gallery-screen">
+                        <img class="gallery-image" alt="" />
+                        <div class="crt-overlay"></div>
+                        <div class="gallery-caption"></div>
+                    </div>
+                    <button class="gallery-nav-btn gallery-next" type="button" aria-label="Next image"><i
+                            class="fas fa-caret-right"></i></button>
+                </div>
+            </div> -->
+
+            <div class="project-card" tabindex="0">
+                <div class="project-content">
+                    <span class="project-title">Pixel Lab (Hack Club)</span>
+                    <div class="project-date-row">
+                        <div class="project-date-tag">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>September 2023 &ndash; June 2025</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag"><i class="fas fa-microchip"></i> Electronics</span>
+                        <span class="project-tag"><i class="fas fa-users"></i> Hack Club</span>
+                    </div>
+                    <span class="project-description">Founded and led pixel lab chapter. Organized weekly workshops in
+                        coding, electronics, and digital art to bring open-source culture to fellow students.</span>
+                    <div class="project-links">
+                        <a href="https://sites.google.com/view/club-dinfo-h2/accueil" class="project-link"
+                            target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Website
+                        </a>
+                    </div>
+                </div>
+                <div class="project-gallery" data-slides='[
+                    {"src": "pictures/pixellab1.jpg", "caption": "Hardware Workshop"},
+                    {"src": "pictures/pixellab2.jpg", "caption": "CS Basics Course"}
+                ]'>
+                    <button class="gallery-nav-btn gallery-prev" type="button" aria-label="Previous image"><i
+                            class="fas fa-caret-left"></i></button>
+                    <div class="gallery-screen">
+                        <img class="gallery-image" alt="" />
+                        <div class="crt-overlay"></div>
+                        <div class="gallery-caption"></div>
+                    </div>
+                    <button class="gallery-nav-btn gallery-next" type="button" aria-label="Next image"><i
+                            class="fas fa-caret-right"></i></button>
+                </div>
+
             </div>
         </div>
     </div>
@@ -135,7 +302,7 @@
             projectList.style.display = 'flex';
             projectList.classList.remove('slide-out-right');
             projectList.classList.add('slide-in-right');
-        }, 500);
+        }, 300);
     });
 
     backBtn.addEventListener('click', (e) => {
@@ -148,6 +315,191 @@
             mainCard.classList.remove('slide-out-left');
             mainCard.classList.add('slide-in-left');
             projectBtn.classList.remove('button-sqr-active');
-        }, 500);
+        }, 100);
+    });
+
+    // Rigorous, single-source-of-truth gallery system with 4-second looping video support
+    document.querySelectorAll('.project-gallery').forEach((gallery) => {
+        const prevBtn = gallery.querySelector('.gallery-prev');
+        const nextBtn = gallery.querySelector('.gallery-next');
+        const screenEl = gallery.querySelector('.gallery-screen');
+        const imgEl = gallery.querySelector('.gallery-image');
+        const captionEl = gallery.querySelector('.gallery-caption');
+
+        // Dynamically create or reuse a video element inside the screen
+        let videoEl = gallery.querySelector('.gallery-video');
+        if (!videoEl && screenEl) {
+            videoEl = document.createElement('video');
+            videoEl.className = 'gallery-video';
+            videoEl.muted = true;
+            videoEl.defaultMuted = true;
+            videoEl.playsInline = true;
+            videoEl.autoplay = true;
+            videoEl.setAttribute('muted', '');
+            videoEl.setAttribute('playsinline', '');
+            videoEl.setAttribute('autoplay', '');
+            screenEl.insertBefore(videoEl, screenEl.querySelector('.crt-overlay') || screenEl.firstChild);
+        }
+
+        let slides = [];
+        try {
+            slides = JSON.parse(gallery.dataset.slides || '[]');
+        } catch (err) {
+            console.error('Failed to parse gallery slides dataset:', err);
+        }
+
+        // Standby element for empty or loading states
+        let standbyEl = screenEl.querySelector('.crt-standby');
+        if (!standbyEl) {
+            standbyEl = document.createElement('div');
+            standbyEl.className = 'crt-standby';
+            standbyEl.innerHTML = '<i class="fas fa-satellite-dish"></i><span>SIGNAL STANDBY</span>';
+            screenEl.appendChild(standbyEl);
+        }
+
+        if (!slides || slides.length === 0) {
+            if (prevBtn) prevBtn.classList.add('is-hidden');
+            if (nextBtn) nextBtn.classList.add('is-hidden');
+            if (imgEl) imgEl.style.display = 'none';
+            if (videoEl) { videoEl.style.display = 'none'; videoEl.pause(); }
+            standbyEl.style.display = 'flex';
+            if (captionEl) captionEl.textContent = 'NO SIGNAL';
+            return;
+        }
+
+        // Hide navigation buttons if there is only 1 slide
+        if (slides.length <= 1) {
+            if (prevBtn) prevBtn.classList.add('is-hidden');
+            if (nextBtn) nextBtn.classList.add('is-hidden');
+        } else {
+            if (prevBtn) prevBtn.classList.remove('is-hidden');
+            if (nextBtn) nextBtn.classList.remove('is-hidden');
+        }
+
+        let currentIndex = 0;
+        let isTransitioning = false;
+
+        const isVideoFile = (url) => {
+            if (!url) return false;
+            return /\.(mp4|webm|ogg|mov|m4v)(\?.*)?$/i.test(url.trim());
+        };
+
+        const renderSlide = (index, animate = false) => {
+            currentIndex = (index + slides.length) % slides.length;
+            const slide = slides[currentIndex];
+
+            const applyContent = () => {
+                if (captionEl) {
+                    captionEl.textContent = slide.caption || '';
+                    captionEl.style.display = slide.caption ? 'block' : 'none';
+                }
+
+                const src = slide.src ? slide.src.trim() : '';
+
+                if (!src) {
+                    if (imgEl) { imgEl.removeAttribute('src'); imgEl.style.display = 'none'; }
+                    if (videoEl) { videoEl.pause(); videoEl.removeAttribute('src'); videoEl.style.display = 'none'; }
+                    standbyEl.style.display = 'flex';
+                    return;
+                }
+
+                if (isVideoFile(src)) {
+                    // Video Mode
+                    if (imgEl) { imgEl.removeAttribute('src'); imgEl.style.display = 'none'; }
+                    standbyEl.style.display = 'none';
+                    if (videoEl) {
+                        videoEl.style.display = 'block';
+                        videoEl.muted = true;
+                        videoEl.playsInline = true;
+                        videoEl.currentTime = 0;
+                        videoEl.src = src;
+                        videoEl.play().catch(() => { });
+                    }
+                } else {
+                    // Image Mode
+                    if (videoEl) { videoEl.pause(); videoEl.removeAttribute('src'); videoEl.style.display = 'none'; }
+                    standbyEl.style.display = 'none';
+                    if (imgEl) {
+                        imgEl.src = src;
+                        imgEl.alt = slide.caption || 'Project demonstration';
+                        imgEl.style.display = 'block';
+                    }
+                }
+            };
+
+            if (animate) {
+                isTransitioning = true;
+                if (imgEl) imgEl.style.opacity = '0.2';
+                if (videoEl) videoEl.style.opacity = '0.2';
+                setTimeout(() => {
+                    applyContent();
+                    if (imgEl) imgEl.style.opacity = '1';
+                    if (videoEl) videoEl.style.opacity = '1';
+                    isTransitioning = false;
+                }, 120);
+            } else {
+                applyContent();
+                if (imgEl) imgEl.style.opacity = '1';
+                if (videoEl) videoEl.style.opacity = '1';
+            }
+        };
+
+        // Enforce 4-second loop constraint on video
+        if (videoEl) {
+            videoEl.addEventListener('timeupdate', () => {
+                if (videoEl.currentTime >= 4) {
+                    videoEl.currentTime = 0;
+                    videoEl.play().catch(() => { });
+                }
+            });
+            videoEl.addEventListener('ended', () => {
+                videoEl.currentTime = 0;
+                videoEl.play().catch(() => { });
+            });
+            videoEl.addEventListener('error', () => {
+                videoEl.style.display = 'none';
+                standbyEl.style.display = 'flex';
+            });
+        }
+
+        if (imgEl) {
+            imgEl.addEventListener('error', () => {
+                imgEl.style.display = 'none';
+                standbyEl.style.display = 'flex';
+            });
+        }
+
+        // Initialize slide 0 immediately from single source of truth
+        renderSlide(0, false);
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (isTransitioning || slides.length <= 1) return;
+                renderSlide(currentIndex - 1, true);
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (isTransitioning || slides.length <= 1) return;
+                renderSlide(currentIndex + 1, true);
+            });
+        }
+
+        // Keyboard navigation when gallery has focus
+        gallery.addEventListener('keydown', (e) => {
+            if (slides.length <= 1) return;
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                renderSlide(currentIndex - 1, true);
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                renderSlide(currentIndex + 1, true);
+            }
+        });
     });
 </script>
