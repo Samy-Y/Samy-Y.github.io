@@ -444,6 +444,148 @@ body {
     cursor: url('move.svg') 0 0, auto;
 }
 
+/* PROJECT CATEGORY TABS */
+
+.project-categories {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 22px;
+    padding-bottom: 2px;
+}
+
+.category-tab {
+    position: relative;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8.5pt;
+    color: #999999;
+    text-decoration: none;
+    white-space: nowrap;
+    outline: none;
+    background: linear-gradient(180deg, #252525 0%, #1a1a1a 100%);
+    border: 1px solid #161616;
+    border-radius: 4px;
+    padding: 7px 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 2px 0 #111111,
+        0 3px 6px rgba(0, 0, 0, 0.35);
+    cursor: url('hand.svg') 0 0, pointer;
+    transition: all 0.12s ease;
+    user-select: none;
+}
+
+.category-tab i {
+    font-size: 9pt;
+    transition: transform 0.15s ease, color 0.15s ease;
+}
+
+/* Category Color Accents */
+.category-tab[data-filter="all"] {
+    --cat-color: #009dff;
+    --cat-glow: rgba(0, 157, 255, 0.25);
+}
+
+.category-tab[data-filter="engineering"] {
+    --cat-color: #ffb703;
+    --cat-glow: rgba(255, 183, 3, 0.25);
+}
+
+.category-tab[data-filter="software"] {
+    --cat-color: #00f5d4;
+    --cat-glow: rgba(0, 245, 212, 0.25);
+}
+
+.category-tab[data-filter="datascience"] {
+    --cat-color: #c084fc;
+    --cat-glow: rgba(192, 132, 252, 0.25);
+}
+
+.category-tab[data-filter="miscellaneous"] {
+    --cat-color: #fb7185;
+    --cat-glow: rgba(251, 113, 133, 0.25);
+}
+
+.category-tab:hover,
+.category-tab:focus-visible {
+    color: #ffffff;
+    border-color: var(--cat-color);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        0 2px 0 var(--cat-color),
+        0 0 10px var(--cat-glow);
+}
+
+.category-tab:hover i,
+.category-tab:focus-visible i {
+    color: var(--cat-color);
+}
+
+.category-tab.is-active {
+    color: #ffffff;
+    border-color: var(--cat-color);
+    background: linear-gradient(180deg, #2b2b2b 0%, #171717 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        0 2px 0 var(--cat-color),
+        0 0 12px var(--cat-glow);
+}
+
+.category-tab.is-active i {
+    color: var(--cat-color);
+    text-shadow: 0 0 8px var(--cat-glow);
+}
+
+.category-tab:active {
+    transform: translateY(2px);
+    box-shadow:
+        inset 0 2px 4px rgba(0, 0, 0, 0.8),
+        0 0 0 #000;
+    cursor: url('move.svg') 0 0, pointer;
+}
+
+/* Empty State */
+.projects-empty-state {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 55px 20px;
+    text-align: center;
+    border: 1px dashed #2e3338;
+    border-radius: 6px;
+    background:
+        radial-gradient(circle at center, #14171a 0%, #0c0e10 100%),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.015) 0px, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 4px);
+    color: #88929b;
+    font-family: 'Share Tech Mono', monospace;
+    letter-spacing: 0.8px;
+    user-select: none;
+}
+
+.projects-empty-state i {
+    font-size: 26pt;
+    color: #525a62;
+    margin-bottom: 12px;
+}
+
+.projects-empty-state .empty-title {
+    font-size: 10.5pt;
+    color: #e0e6ed;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.projects-empty-state .empty-subtitle {
+    font-size: 8.5pt;
+    color: #68727d;
+}
+
 .projects-grid {
     width: 100%;
     display: grid;
@@ -624,6 +766,16 @@ body {
     .button-back {
         width: 100%;
         justify-content: center;
+    }
+
+    .project-categories {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 8px;
+        margin-bottom: 16px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: #333333 transparent;
     }
 
     .project-gallery {
