@@ -901,7 +901,8 @@ body {
     box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.9);
     user-select: none;
     -webkit-user-select: none;
-    pointer-events: none;
+    pointer-events: auto;
+    cursor: default;
 }
 
 .gallery-image,
@@ -932,6 +933,8 @@ body {
     border-radius: 3px;
     user-select: none;
     -webkit-user-select: none;
+    opacity: 1;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     /* Scanlines + RGB Subpixel Lines + Vignette */
     background:
         linear-gradient(rgba(18, 16, 16, 0) 50%,
@@ -969,16 +972,20 @@ body {
 
 @keyframes crtFlicker {
     0% {
-        opacity: 0.96;
+        filter: brightness(0.97);
     }
 
     50% {
-        opacity: 1;
+        filter: brightness(1.02);
     }
 
     100% {
-        opacity: 0.98;
+        filter: brightness(0.98);
     }
+}
+
+.gallery-screen:hover .crt-overlay {
+    opacity: 0;
 }
 
 .gallery-caption {
