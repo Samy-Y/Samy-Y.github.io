@@ -3,10 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Samy Youssoufine | Personal Website</title>
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            if (saved === 'light' || saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', saved);
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -27,7 +39,7 @@
                 <i class="fab fa-github fa-2x"></i>
                 GitHub
             </a>
-            <a href="mailto:youssoufinesamy@gmail.com" class="button-sqr button-email">
+            <a href="mailto:samy@txt.ma" class="button-sqr button-email">
                 <i class="fa fa-envelope fa-2x"></i>
                 Email
             </a>
@@ -35,10 +47,20 @@
                 <i class="fab fa-linkedin fa-2x"></i>
                 LinkedIn
             </a>
-            <a href="" class="button-sqr button-cv">
+            <a href="assets/Samy Youssoufine Resume.pdf" class="button-sqr button-cv">
                 <i class="fa fa-file fa-2x"></i>
                 Resume
             </a>
+        </div>
+        <div class="theme-switch-wrapper">
+            <button class="theme-switch" type="button" role="switch" aria-checked="false"
+                aria-label="Toggle light and dark theme" title="Toggle theme">
+                <span class="theme-switch-track">
+                    <i class="fas fa-moon theme-icon-moon" aria-hidden="true"></i>
+                    <i class="fas fa-sun theme-icon-sun" aria-hidden="true"></i>
+                    <span class="theme-switch-thumb"></span>
+                </span>
+            </button>
         </div>
     </div>
     <!-- IMPORTANT NOTE: changed "projects" to "portfolio" but will still refer to EVERYTHING in code as "projects" cuz legacy and i'm too lazy to change everything -->
@@ -80,7 +102,7 @@
                     <div class="project-date-row">
                         <div class="project-date-tag">
                             <i class="far fa-calendar-alt"></i>
-                            <span>September 2026 &ndash; Now</span>
+                            <span>August 2026 &ndash; Now</span>
                         </div>
                     </div>
                     <div class="project-tags">
@@ -186,6 +208,14 @@
                     </div>
                     <span class="project-description">Precision CNC cartesian system plotter engineered with dual-axis
                         stepper drives and custom pen plotting end-effector.</span>
+                    <div class="project-links">
+                        <a href="assets/gr14_p2_s4.pdf" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Report
+                        </a>
+                        <a href="https://github.com/Samy-Y/projet2-groupe14" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> Github
+                        </a>
+                    </div>
                 </div>
                 <div class="project-gallery" data-slides='[
                     {"src": "pictures/scc-view1.jpg", "caption": "Main Assembly (Top)"},
@@ -299,7 +329,7 @@
                     <span class="project-description">Three-wheeled mobile platform for autonomous navigation. Developed
                         using an Arduino Uno microcontroller and featuring PID control for DC
                         motor speed regulation.</span>
-                    <a href="assets/gr13_P1_S4.pdf" class="project-link" target="_blank">
+                    <a href="assets/gr13_p1_s4.pdf" class="project-link" target="_blank">
                         <i class="fas fa-external-link-alt"></i> Read Final Report
                     </a>
                 </div>
@@ -407,12 +437,12 @@
                     <span class="project-description">Founded and led Pixel Lab, a <a href="https://hackclub.com"
                             class="regular-link">Hack Club</a>-affiliated club. Organized weekly workshops in
                         coding, electronics, and digital art to bring open-source culture to fellow students.</span>
-                    <div class="project-links">
+                    <!-- <div class="project-links">
                         <a href="https://sites.google.com/view/club-dinfo-h2/accueil" class="project-link"
                             target="_blank">
                             <i class="fas fa-external-link-alt"></i> Website
                         </a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="project-gallery" data-slides='[
                     {"src": "pictures/pixellab1.jpg", "caption": "Hardware Workshop"},
@@ -437,6 +467,16 @@
                 <div class="empty-title">NO PROJECTS LOGGED IN THIS CATEGORY YET</div>
                 <div class="empty-subtitle">THIS PART SHOULD BE FILLED IN SOON!</div>
             </div>
+        </div>
+        <div class="theme-switch-wrapper">
+            <button class="theme-switch" type="button" role="switch" aria-checked="false"
+                aria-label="Toggle light and dark theme" title="Toggle theme">
+                <span class="theme-switch-track">
+                    <i class="fas fa-moon theme-icon-moon" aria-hidden="true"></i>
+                    <i class="fas fa-sun theme-icon-sun" aria-hidden="true"></i>
+                    <span class="theme-switch-thumb"></span>
+                </span>
+            </button>
         </div>
     </div>
 </body>
@@ -480,6 +520,50 @@
     } else {
         preloadGalleryMedia();
     }
+
+    // Theme Switch Controller
+    const initThemeSystem = () => {
+        const themeSwitches = document.querySelectorAll('.theme-switch');
+
+        const updateSliders = (isLight) => {
+            themeSwitches.forEach(btn => {
+                btn.setAttribute('aria-checked', isLight ? 'true' : 'false');
+            });
+        };
+
+        const applyTheme = (theme, save = true) => {
+            const isLight = theme === 'light';
+            document.documentElement.setAttribute('data-theme', isLight ? 'light' : 'dark');
+            if (save) {
+                localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            }
+            updateSliders(isLight);
+        };
+
+        const currentTheme = document.documentElement.getAttribute('data-theme') ||
+            (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+
+        applyTheme(currentTheme, false);
+
+        themeSwitches.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const isCurrentlyLight = document.documentElement.getAttribute('data-theme') === 'light';
+                applyTheme(isCurrentlyLight ? 'dark' : 'light', true);
+            });
+        });
+
+        if (window.matchMedia) {
+            window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+                if (!localStorage.getItem('theme')) {
+                    applyTheme(e.matches ? 'light' : 'dark', false);
+                }
+            });
+        }
+    };
+
+    initThemeSystem();
 
     const projectBtn = document.querySelector('.button-project');
     const backBtn = document.querySelector('.button-back');
@@ -583,7 +667,7 @@
         if (!standbyEl) {
             standbyEl = document.createElement('div');
             standbyEl.className = 'crt-standby';
-            standbyEl.innerHTML = '<i class="fas fa-satellite-dish"></i><span>SIGNAL STANDBY</span>';
+            standbyEl.innerHTML = '<i class="fas fa-drafting-compass"></i><span>WORK IN PROGRESS</span>';
             screenEl.appendChild(standbyEl);
         }
 
@@ -593,7 +677,7 @@
             if (imgEl) imgEl.style.display = 'none';
             if (videoEl) { videoEl.style.display = 'none'; videoEl.pause(); }
             standbyEl.style.display = 'flex';
-            if (captionEl) captionEl.textContent = 'NO SIGNAL';
+            if (captionEl) captionEl.textContent = 'NO IMAGE';
             return;
         }
 
@@ -731,5 +815,44 @@
                 renderSlide(currentIndex + 1, true);
             }
         });
+
+        // Touch swipe gestures and tap clarity toggle for mobile screens
+        if (screenEl) {
+            let touchStartX = 0;
+            let touchStartY = 0;
+            let touchStartTime = 0;
+
+            screenEl.addEventListener('touchstart', (e) => {
+                if (!e.touches || e.touches.length === 0) return;
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+                touchStartTime = Date.now();
+            }, { passive: true });
+
+            screenEl.addEventListener('touchend', (e) => {
+                if (!e.changedTouches || e.changedTouches.length === 0) return;
+                const touchEndX = e.changedTouches[0].clientX;
+                const touchEndY = e.changedTouches[0].clientY;
+                const diffX = touchEndX - touchStartX;
+                const diffY = touchEndY - touchStartY;
+                const duration = Date.now() - touchStartTime;
+
+                // Horizontal swipe: switch slides
+                if (Math.abs(diffX) > 35 && Math.abs(diffX) > Math.abs(diffY) && duration < 600) {
+                    if (slides.length <= 1 || isTransitioning) return;
+                    if (diffX < 0) {
+                        renderSlide(currentIndex + 1, true);
+                    } else {
+                        renderSlide(currentIndex - 1, true);
+                    }
+                } else if (Math.abs(diffX) < 10 && Math.abs(diffY) < 10 && duration < 350) {
+                    // Quick tap: toggle CRT scanlines for clear viewing on touch devices
+                    const crtOverlay = screenEl.querySelector('.crt-overlay');
+                    if (crtOverlay) {
+                        crtOverlay.classList.toggle('crt-overlay-clear');
+                    }
+                }
+            }, { passive: true });
+        }
     });
 </script>
