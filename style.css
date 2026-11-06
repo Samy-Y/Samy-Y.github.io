@@ -1900,6 +1900,64 @@ body {
 }
 
 /* ==========================================================================
+   RASTER TEXTURE THEME SWITCHER MODE (TOGGLED VIA SHIFT + R)
+   ========================================================================= */
+html[data-switcher-raster="true"] .theme-switch {
+    position: relative;
+    width: 44px;
+    height: 23px;
+    border-radius: 3px;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    cursor: url('hand.svg') 0 0, pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html[data-switcher-raster="true"] .theme-switch::before,
+html[data-switcher-raster="true"] .theme-switch::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+/* Dark mode (default): turned off.png is visible */
+html[data-switcher-raster="true"] .theme-switch::before {
+    background-image: url('assets/textures/turned%20off.png');
+    opacity: 1;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.7));
+}
+
+html[data-switcher-raster="true"] .theme-switch::after {
+    background-image: url('assets/textures/turned%20on.png');
+    opacity: 0;
+    /* filter: drop-shadow(0 0 6px rgba(255, 65, 0, 0.5)); */
+    /* no. */
+}
+
+/* Light mode: turned on.png is visible */
+html[data-switcher-raster="true"][data-theme="light"] .theme-switch::before {
+    opacity: 0;
+}
+
+html[data-switcher-raster="true"][data-theme="light"] .theme-switch::after {
+    opacity: 1;
+    /* filter: drop-shadow(0 0 8px rgba(255, 65, 0, 0.55)) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2)); */
+    /* no. */
+}
+
+html[data-switcher-raster="true"] .theme-switch-track {
+    display: none !important;
+}
+
+/* ==========================================================================
    WHITE THEME (LIGHT MODE INVERSION)
    ========================================================================== */
 

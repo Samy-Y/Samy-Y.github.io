@@ -17,6 +17,9 @@
             } else {
                 document.documentElement.setAttribute('data-theme', 'dark');
             }
+            if (localStorage.getItem('raster-switcher') !== 'false') {
+                document.documentElement.setAttribute('data-switcher-raster', 'true');
+            }
         })();
     </script>
 </head>
@@ -598,6 +601,38 @@
                 }
             });
         }
+
+        // Preload raster switcher textures
+        const preloadRasterTextures = () => {
+            const onImg = new Image();
+            onImg.src = 'assets/textures/turned%20on.png';
+            const offImg = new Image();
+            offImg.src = 'assets/textures/turned%20off.png';
+        };
+        preloadRasterTextures();
+
+        // Raster Switcher Mode Toggle via Shift + R
+        const toggleRasterMode = () => {
+            const isRaster = document.documentElement.getAttribute('data-switcher-raster') === 'true';
+            const nextMode = !isRaster;
+            if (nextMode) {
+                document.documentElement.setAttribute('data-switcher-raster', 'true');
+                localStorage.setItem('raster-switcher', 'true');
+            } else {
+                document.documentElement.removeAttribute('data-switcher-raster');
+                localStorage.setItem('raster-switcher', 'false');
+            }
+        };
+
+        document.addEventListener('keydown', (e) => {
+            if (e.shiftKey && (e.key === 'R' || e.key === 'r' || e.code === 'KeyR')) {
+                if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable)) {
+                    return;
+                }
+                e.preventDefault();
+                toggleRasterMode();
+            }
+        });
     };
 
     initThemeSystem();
